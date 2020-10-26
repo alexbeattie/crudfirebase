@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
+import MultipleImageUploadComponent from "./multiple-image-upload.component";
+import SingleImageUploadComponent from "./single-image-upload.component";
 
 export default class AddTutorial extends Component {
     constructor(props) {
@@ -96,7 +98,28 @@ export default class AddTutorial extends Component {
                                     name="description"
                                 />
                             </div>
-                            <ImageUpload />
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            Single Image Upload Preview
+              </div>
+                                        <div className="card-body">
+                                            <SingleImageUploadComponent />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            Multiple Image Upload Preview
+              </div>
+                                        <div className="card-body">
+                                            <MultipleImageUploadComponent />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <button onClick={this.saveTutorial} className="btn btn-success">
                                 Submit
             </button>
